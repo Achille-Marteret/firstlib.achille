@@ -103,7 +103,8 @@ compter_nombre_d_adjoints <- function(df) {
 #' des élus conseillers municipaux.
 #' @return La fonction retourne l'élus le plus âgé dans le dataframe utilisé.
 #'
-#' @import dplyr lubridate
+#' @import dplyr
+#' @import lubridate
 
 trouver_l_elu_le_plus_age <- function(df) {
   validate_schema(df)
@@ -127,7 +128,8 @@ trouver_l_elu_le_plus_age <- function(df) {
 #' @return La fonction retourne la distribution des âges dans chaque quantiles
 #' dans le dataframe choisie.
 #'
-#' @import dplyr lubridate
+#' @import dplyr
+#' @import lubridate
 
 
 calcul_distribution_age <- function(df) {
@@ -159,7 +161,8 @@ calcul_distribution_age <- function(df) {
 #' @return La fonction retourne un diagramme en barres horizontal de la catégorie
 #' socio professionnelle en fonction du nombre d'élus.
 #'
-#' @import dplyr ggplot2
+#' @import dplyr
+#' @import ggplot2
 
 plot_code_professions <- function(df) {
   validate_schema(df)
@@ -199,7 +202,7 @@ plot_code_professions <- function(df) {
 #'
 #' Lorsque l'objet n'est pas de type commune, la fonction retourne warning :
 #' "L'objet doit être de type 'commune'."
-#' @export
+#'
 #' @examples
 #' # Affectation de la classe 'commune' au dataframe df_Nantes.
 #' class(df_Nantes) <- c("commune", class(df_Nantes))
@@ -208,7 +211,10 @@ plot_code_professions <- function(df) {
 #' summary(df_Nantes)
 #' summary.commune(df_Nantes)
 #'
-#' @import dplyr lubridate
+#' @import dplyr
+#' @import lubridate
+#'
+#' @export
 
 summary.commune <- function(x) {
 
@@ -256,7 +262,6 @@ summary.commune <- function(x) {
 #'
 #' Lorsque l'objet n'est pas de type département, la fonction retourne warning :
 #' "L'objet doit être de type 'département'."
-#' @export
 #' @examples
 #' # Affectation de la classe 'département' au dataframe df_Gers.
 #' class(df_Gers) <- c("département", class(df_Gers))
@@ -265,7 +270,10 @@ summary.commune <- function(x) {
 #' summary(df_Gers)
 #' summary.departement(df_Gers)
 #'
-#' @import dplyr lubridate
+#' @import dplyr
+#' @import lubridate
+#'
+#' @export
 
 summary.departement <- function(x) {
 
@@ -336,9 +344,11 @@ summary.departement <- function(x) {
 #'
 #' Lorsque le dataframe contient plusieurs communes, il retourne Warning :
 #' "Le data.frame contient plusieurs communes. Veuillez filtrer pour une seule commune."
-#' @export
 #'
-#' @import dplyr ggplot2
+#' @import dplyr
+#' @import ggplot2
+#'
+#' @export
 
 plot.commune <- function(df) {
   validate_schema(df)
