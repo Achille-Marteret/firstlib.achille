@@ -14,8 +14,8 @@ Un message confirmant que le schéma est conforme si la validation réussit.
 }
 \description{
 Cette fonction vérifie que le dataframe fourni respecte le schéma attendu
-pour le fichier "élus-conseillers-municipaux-cm".
-Si le schéma ne correspond pas, la fonction génère une erreur.
+pour les données des élus conseillers municipaux. Si le schéma ne correspond
+pas aux spécifications, la fonction génère une erreur détaillée.
 }
 \examples{
 df <- data.frame(

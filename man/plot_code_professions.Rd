@@ -15,7 +15,9 @@ La fonction retourne un diagramme en barres horizontal de la catégorie
 socio professionnelle en fonction du nombre d'élus.
 }
 \description{
-La fonction compte le nombre d'élus par catégorie socio professionnelle
-différentes, dans un dataframe qui valide le schéma (mêmes noms et nombres de colonnes)
-du dataframe élus-conseillers-municipaux-cm.
+Cette fonction crée un diagramme en barres horizontal représentant la
+distribution des élus selon leur catégorie socio-professionnelle.
+Les données doivent provenir d'un dataframe respectant le schéma du
+fichier élus-conseillers-municipaux-cm. Les catégories sont triées
+par nombre d'élus décroissant.
 }

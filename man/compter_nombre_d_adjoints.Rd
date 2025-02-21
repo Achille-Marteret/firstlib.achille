@@ -11,10 +11,11 @@ compter_nombre_d_adjoints(df)
 des élus conseillers municipaux.}
 }
 \value{
-Le nombre d'adjoints.
+Un entier représentant le nombre total d'adjoints dans le dataframe
 }
 \description{
-Cette fonction permet de compter le nombre d'adjoints dans un dataframe
-qui valide le schéma (mêmes noms et nombres de colonnes) du dataframe
+Cette fonction calcule le nombre total d'adjoints au maire à partir d'un
+dataframe respectant le schéma des données des élus conseillers municipaux.
+Le dataframe doit contenir les mêmes colonnes que le fichier
 élus-conseillers-municipaux-cm.
 }

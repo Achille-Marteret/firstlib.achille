@@ -11,10 +11,13 @@ trouver_l_elu_le_plus_age(df)
 des élus conseillers municipaux.}
 }
 \value{
-La fonction retourne l'élus le plus âgé dans le dataframe utilisé.
+Un dataframe d'une ligne contenant le nom, prénom, date de naissance
+et âge de l'élu le plus âgé
 }
 \description{
-Cette fonction permet de l'élu le plus âgé dans un dataframe qui valide
-le schéma (mêmes noms et nombres de colonnes) du dataframe
+Cette fonction identifie l'élu le plus âgé dans un dataframe respectant
+le schéma des données des élus conseillers municipaux. Elle retourne les
+informations de l'élu (nom, prénom, date de naissance et âge calculé).
+Le dataframe doit contenir les mêmes colonnes que le fichier
 élus-conseillers-municipaux-cm.
 }

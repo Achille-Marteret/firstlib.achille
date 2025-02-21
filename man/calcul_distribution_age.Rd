@@ -11,9 +11,12 @@ calcul_distribution_age(df)
 des élus conseillers municipaux.}
 }
 \value{
-La fonction retourne la distribution des âges dans chaque quantiles
-dans le dataframe choisie.
+Un vecteur nommé contenant les 5 quantiles calculés (0\%, 25\%, 50\%, 75\%, 100\%)
+des âges des élus
 }
 \description{
-Cette fonction calculera les quantiles 0, 25, 50, 75, 100 de l’âge des élu.e.s.
+Cette fonction calcule la distribution des âges des élus en utilisant les
+quantiles 0\% (minimum), 25\%, 50\% (médiane), 75\% et 100\% (maximum).
+Les âges sont calculés à partir des dates de naissance jusqu'à la date
+du jour. Les dates non valides sont exclues du calcul.
 }
