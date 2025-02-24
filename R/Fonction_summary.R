@@ -88,11 +88,10 @@ summary.commune <- function(x) {
 #' `"L'objet doit être de type 'département'."`
 #'
 #' @examples
-#' # Attribution de la classe 'département' au dataframe df_Gers
-#' class(df_Gers) <- c("département", class(df_Gers))
+#' # Attribution de la classe 'département' au dataframe "mon_dataframe"
+#' mon_dataframe <- creer_departement(mon_dataframe)
 #'
-#' summary(df_Gers)
-#' summary.departement(df_Gers)
+#' summary(mon_dataframe)
 #'
 #' @import dplyr
 #' @import lubridate
@@ -100,8 +99,8 @@ summary.commune <- function(x) {
 #' @export
 summary.departement <- function(x) {
 
-  if (!inherits(x, "département")) {
-    stop("L'objet doit être de type 'département'.")
+  if (!inherits(x, "departement")) {
+    stop("L'objet doit être de type 'departement'.")
   }
 
   cat("Nom du département :", unique(x$Libellé.du.département), "\n")
@@ -110,6 +109,7 @@ summary.departement <- function(x) {
   cat("Distribution des âges des élu.e.s :", "\n")
   print(calcul_distribution_age(x))
 
+  #Trouver l'élu le plus agé
   trouver_elu_le_plus_age <- function(df) {
     validate_schema(df)
     df |>
@@ -119,10 +119,12 @@ summary.departement <- function(x) {
   }
 
   elu_max <- trouver_elu_le_plus_age(x)
-  cat("Élu.e le/la plus âgé.e :",  elu_max$Nom.de.l.élu,
-      ", Âge :",  elu_max$Âge,
-      ", Commune :", elu_max$Libellé.de.la.commune, "\n")
+  cat("L'élu.e le ou la plus âgé.e :", "\n")
+  cat("Nom :", elu_max$Nom.de.l.élu, "\n")
+  cat("Âge :", elu_max$Âge, "\n")
+  cat("Commune :", elu_max$Libellé.de.la.commune, "\n")
 
+  # Trouver l'élu le/la plus jeune
   trouver_l_elu_le_plus_jeune <- function(df) {
     validate_schema(df)
     df |>
@@ -132,10 +134,12 @@ summary.departement <- function(x) {
   }
 
   elu_min <- trouver_l_elu_le_plus_jeune(x)
-  cat("Élu.e le/la plus jeune :", elu_min$Nom.de.l.élu,
-      ", Âge :", elu_min$Âge,
-      ", Commune :", elu_min$Libellé.de.la.commune, "\n")
+  cat("Élu.e le/la plus jeune :", "\n")
+  cat("Nom :", elu_min$Nom.de.l.élu, "\n")
+  cat("Âge :", elu_min$Âge, "\n")
+  cat("Commune :", elu_min$Libellé.de.la.commune, "\n")
 
+  # Commune avec la moyenne d’âge la plus faible
   x <- x |>
     mutate(Âge = as.integer(interval(dmy(Date.de.naissance), Sys.Date()) / years(1)))
 
@@ -145,9 +149,9 @@ summary.departement <- function(x) {
   cat("Commune avec la moyenne d’âge la plus faible :", commune_min_age, "\n")
   print(summary(x$Âge[x$Libellé.de.la.commune == commune_min_age]))
 
+  # Commune avec la moyenne d’âge la plus élevée
   commune_max_age <- age_par_commune[which.max(age_par_commune$Âge), "Libellé.de.la.commune"]
   cat("Commune avec la moyenne d’âge la plus élevée :", commune_max_age, "\n")
   print(summary(x$Âge[x$Libellé.de.la.commune == commune_max_age]))
 
 }
-

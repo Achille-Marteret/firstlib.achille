@@ -17,6 +17,13 @@
 #' Si le dataframe contient plusieurs communes, la fonction génère une erreur :
 #' `"Le data.frame contient plusieurs communes. Veuillez filtrer pour une seule commune."`
 #'
+#' @examples
+#' # Attribution de la classe 'commune' au dataframe "mon_dataframe"
+#' mon_dataframe <- creer_commune(mon_dataframe)
+#'
+#' # Utilisation de la fonction plot
+#' plot(mon_dataframe)
+#'
 #' @import dplyr
 #' @import ggplot2
 #'
@@ -95,6 +102,13 @@ plot.commune <- function(df) {
 #'   \item Le data.frame contient des données de plusieurs départements
 #'   \item Le schéma des données n'est pas valide
 #' }
+#'
+#' @examples
+#' # Attribution de la classe 'département' au dataframe "mon_dataframe"
+#' mon_dataframe <- creer_departement(mon_dataframe)
+#'
+#' # Utilisation de la fonction plot
+#' plot(mon_dataframe)
 #'
 #' @import dplyr
 #' @import ggplot2

@@ -100,6 +100,7 @@ creer_commune <- function(df) {
 creer_departement <- function(df) {
   validate_schema(df)
 
+  # Vérifier que toutes les communes sont dans le même département
   unique_dept_code <- df$Code.du.département |>
     unique() |>
     length()
@@ -108,6 +109,7 @@ creer_departement <- function(df) {
     stop("Le dataframe est composé de plusieurs départements")
   }
 
+  # Ajouter la classe 'departement' si elle n'existe pas déjà
   if(!inherits(df, "departement")) {
     class(df) <- c("departement", class(df))
   }
