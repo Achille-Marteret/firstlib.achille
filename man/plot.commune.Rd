@@ -24,3 +24,11 @@ du fichier \code{élus-conseillers-municipaux-cm} (mêmes noms et nombres de col
 Si le dataframe contient plusieurs communes, la fonction génère une erreur :
 \code{"Le data.frame contient plusieurs communes. Veuillez filtrer pour une seule commune."}
 }
+\examples{
+# Attribution de la classe 'commune' au dataframe "mon_dataframe"
+mon_dataframe <- creer_commune(mon_dataframe)
+
+# Utilisation de la fonction plot
+plot(mon_dataframe)
+
+}

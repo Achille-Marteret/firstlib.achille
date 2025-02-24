@@ -3,8 +3,8 @@
 #' Ce jeu de données contient des informations sur les élus conseillers municipaux
 #' en France, incluant les détails sur les départements, communes, élus, et mandats.
 #'
-#' @format ## `dataset`
-#' Un data frame avec 489973 lignes et 16 colonnes :
+#' @format ## `dataset_sample`
+#' Un data frame avec 9753 lignes et 16 colonnes :
 #' \describe{
 #'   \item{Code.du.département}{Code INSEE du département.}
 #'   \item{Libellé.du.département}{Nom du département.}
@@ -25,4 +25,8 @@
 #' }
 #'
 #' @source Répertoire National des Élus, data.gouv.fr, consulté en février 2025 : <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/#/resources/d5f400de-ae3f-4966-8cb6-a85c70c6c24a>
-"dataset"
+#'
+#' @examples
+#' data(dataset_sample)
+#' head(dataset_sample)
+"dataset_sample"

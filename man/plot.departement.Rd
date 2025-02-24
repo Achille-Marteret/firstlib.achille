@@ -53,3 +53,11 @@ La fonction s'arrête avec une erreur si :
 }
 }
 
+\examples{
+# Attribution de la classe 'département' au dataframe "mon_dataframe"
+mon_dataframe <- creer_departement(mon_dataframe)
+
+# Utilisation de la fonction plot
+plot(mon_dataframe)
+
+}

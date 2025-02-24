@@ -32,10 +32,9 @@ Si l'objet fourni n'est pas de type 'département', la fonction génère un mess
 \code{"L'objet doit être de type 'département'."}
 }
 \examples{
-# Attribution de la classe 'département' au dataframe df_Gers
-class(df_Gers) <- c("département", class(df_Gers))
+# Attribution de la classe 'département' au dataframe "mon_dataframe"
+mon_dataframe <- creer_departement(mon_dataframe)
 
-summary(df_Gers)
-summary.departement(df_Gers)
+summary(mon_dataframe)
 
 }
