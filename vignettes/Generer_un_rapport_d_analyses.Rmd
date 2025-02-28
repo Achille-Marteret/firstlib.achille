@@ -1,0 +1,94 @@
+---
+title: "Generer_un_rapport_d_analyses"
+format: html
+vignette: >
+  %\VignetteIndexEntry{Generer_un_rapport_d_analyses}
+  %\VignetteEngine{quarto::quarto}
+  %\VignetteEncoding{UTF-8}
+execute:
+  echo: true
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(firstlib.achille)
+```
+
+## Introduction
+
+Cette vignette illustre l'utilisation des fonctions `summary.commune`, `summary.departement` et `generer_rapport` du package **firstlib.achille**.
+
+Ces fonctions permettent de :
+
+- Résumer les informations d'une **commune** avec `summary.commune`
+- Résumer les informations d'un **département** avec `summary.departement`
+- Générer un **rapport d'analyse** avec `generer_rapport`
+
+## Résumé d'une commune
+
+La fonction `summary.commune()` fournit un résumé des informations essentielles d'une commune, notamment :
+- Le nom de la commune
+- Le nombre total d'élus
+- La distribution des âges des élus
+- Les informations sur l'élu le plus âgé
+
+### Exemple d'utilisation
+
+```{r, eval=FALSE}
+library(firstlib.achille)
+
+# Création d'un exemple de dataframe
+commune_exemple <- data.frame(
+  "Libellé.de.la.commune" = "Exemple",
+  "Nom.de.l.élu" = c("Dupont", "Martin"),
+  "Prénom.de.l.élu" = c("Jean", "Marie"),
+  "Date.de.naissance" = c("01/01/1950", "01/01/1960")
+)
+
+# Attribution de la classe 'commune'
+commune_exemple <- creer_commune(commune_exemple)
+
+# Résumé de la commune
+summary(commune_exemple)
+```
+
+## Résumé d'un département
+
+La fonction `summary.departement()` permet d'obtenir un résumé détaillé des informations d'un département, incluant :
+- Le nom du département
+- Le nombre de communes et d'élus
+- La distribution des âges
+- L'élu le plus âgé et le plus jeune
+- Les communes avec la moyenne d’âge la plus basse et la plus haute
+
+### Exemple d'utilisation
+
+```{r, eval=FALSE}
+# Création d'un département fictif
+mon_departement <- creer_departement(mon_dataframe)
+
+# Résumé du département
+summary(mon_departement)
+```
+
+## Générer un rapport
+
+La fonction `generer_rapport()` permet de générer un rapport HTML basé sur un fichier **Quarto (.qmd)** en utilisant des codes INSEE de commune et de département.
+
+### Exemple d'utilisation
+
+```{r, eval=FALSE}
+generer_rapport(commune = "44109", departement = "44", output = "rapport_final.html")
+```
+
+Cela produira un rapport détaillé au format **HTML**, contenant les informations d'analyse pour la commune et le département spécifiés.
+
+## Conclusion
+
+Ces fonctions permettent d'obtenir rapidement des analyses détaillées sur les élus municipaux et de générer des rapports automatisés pour une meilleure visualisation des données.
