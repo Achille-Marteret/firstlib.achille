@@ -63,3 +63,22 @@ a:hover {
 .btn-primary:hover {
   background-color: #0056b3; /* Lien au survol devient plus clair */
 }
+
+/* custom.css */
+#header-logo {
+    background-image: url('inst/www/logo.jpg');  /* Chemin relatif vers le fichier JPG */
+    width: 150px;  /* Ajuster la taille du logo */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Pour le logo dans la barre de navigation */
+.navbar-brand {
+    background-image: url('inst/www/logo.jpg');
+    background-size: contain;  /* Garder les proportions du logo */
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+}
