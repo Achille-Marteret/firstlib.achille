@@ -1,5 +1,9 @@
 # firstlib.achille
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/achille-marteret/firstlib.achille/main/inst/www/logo.jpg" alt="Logo de firstlib.achille" width="250">
+</div>
+
 ## Outils d'analyse des données des élus conseillers municipaux en France
 
 **Version** : 0.0.0.9000

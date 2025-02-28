@@ -1,5 +1,8 @@
 url: https://achille-marteret.github.io/firstlib.achille/
 template:
   bootstrap: 5
-  includes:
-    in_header: pkgdown/custom.css
+
+navbar:
+  bg: "#003366"  # Couleur de fond de la navbar
+  fg: "#FFFFFF"  # Couleur du texte dans la navbar
+  border: "#002244"  # Couleur de la bordure de la navbar
