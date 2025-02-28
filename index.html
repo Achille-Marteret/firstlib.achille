@@ -18,7 +18,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-#003366" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="index.html">firstlib.achille</a>
 
@@ -53,6 +53,66 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="firstlibachille">firstlib.achille<a class="anchor" aria-label="anchor" href="#firstlibachille"></a>
 </h1></div>
+<div align="center">
+<p><img src="https://raw.githubusercontent.com/achille-marteret/firstlib.achille/main/inst/www/logo.jpg" alt="Logo de firstlib.achille" width="250"></p>
+</div>
+<div class="section level2">
+<h2 id="outils-danalyse-des-données-des-élus-conseillers-municipaux-en-france">Outils d’analyse des données des élus conseillers municipaux en France<a class="anchor" aria-label="anchor" href="#outils-danalyse-des-donn%C3%A9es-des-%C3%A9lus-conseillers-municipaux-en-france"></a>
+</h2>
+<p><strong>Version</strong> : 0.0.0.9000</p>
+<p><strong>Auteur</strong> : Achille Marteret<br><strong>Email</strong> : <a href="mailto:marteret.achille@gmail.com">marteret.achille@gmail.com</a></p>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="description">Description<a class="anchor" aria-label="anchor" href="#description"></a>
+</h2>
+<p>Le package <strong><code>firstlib.achille</code></strong> fournit une suite d’outils d’analyse statistique pour les données du <strong>Répertoire National des Élus (RNE)</strong>. Il permet d’automatiser le traitement des informations relatives aux élus communaux et départementaux, et offre plusieurs fonctions facilitant l’exploration et la visualisation des données.</p>
+<div class="section level3">
+<h3 id="principales-fonctionnalités-">Principales fonctionnalités :<a class="anchor" aria-label="anchor" href="#principales-fonctionnalit%C3%A9s-"></a>
+</h3>
+<ul>
+<li>
+<strong>Importation et prétraitement des données</strong> des élus à partir du RNE.</li>
+<li>
+<strong>Calcul du nombre total d’élus et d’adjoints</strong> par commune et département.</li>
+<li>
+<strong>Identification des élus les plus âgés</strong> et analyse de la distribution des âges.</li>
+<li>
+<strong>Visualisation des professions des élus</strong> via des graphiques en barres.</li>
+<li>
+<strong>Méthodes génériques</strong> : <code><a href="reference/summary.commune.html">summary.commune()</a></code> et <code><a href="reference/summary.departement.html">summary.departement()</a></code> pour générer des rapports détaillés sur les caractéristiques des élus par commune et département.</li>
+<li>
+<strong>Visualisations spécifiques aux communes et départements</strong> : Utilisation des fonctions <code><a href="reference/plot.commune.html">plot.commune()</a></code> et <code><a href="reference/plot.departement.html">plot.departement()</a></code> pour afficher la répartition des professions des élus.</li>
+</ul>
+<p>Ce package permet d’assurer une meilleure compréhension des dynamiques locales en fournissant des indicateurs clés sur la représentation politique au niveau municipal et départemental.</p>
+<hr>
+</div>
+</div>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<div class="section level3">
+<h3 id="prérequis">Prérequis<a class="anchor" aria-label="anchor" href="#pr%C3%A9requis"></a>
+</h3>
+<p>Avant d’installer <strong><code>firstlib.achille</code></strong>, assurez-vous d’avoir installé les logiciels suivants :</p>
+<ul>
+<li>
+<a href="https://cran.r-project.org/" class="external-link">R</a> (version &gt;= 3.5)</li>
+<li><a href="https://rstudio.com/" class="external-link">RStudio</a></li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="installer-le-package-depuis-github">Installer le package depuis GitHub<a class="anchor" aria-label="anchor" href="#installer-le-package-depuis-github"></a>
+</h3>
+<p>Pour installer le package directement depuis GitHub, vous pouvez utiliser <strong><code>devtools</code></strong> :</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Installer devtools si ce n'est pas déjà fait</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Installer firstlib.achille depuis GitHub</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"achille-marteret/firstlib.achille"</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
 </div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
