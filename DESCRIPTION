@@ -29,7 +29,8 @@ Imports:
     dplyr,
     ggplot2,
     lubridate,
-    stringr
+    stringr,
+    quarto
 Depends: 
     R (>= 3.5)
 LazyData: true

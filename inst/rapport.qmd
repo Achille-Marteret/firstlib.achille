@@ -1,0 +1,48 @@
+---
+title: "Rapport"
+format: html
+editor: visual
+author: "Achille Marteret"
+params:
+  code_commune: "44109"  # Code INSEE pour Nantes
+  code_departement: "44"  # Code INSEE pour la Loire-Atlantique
+---
+
+# Introduction
+
+Ce rapport utilise les paramètres suivants : - Code Commune : `r params$code_commune` - Code Département : `r params$code_departement`
+
+```{r}
+# Charger les bibliothèques
+library(firstlib.achille)
+library(quarto)
+```
+
+# Appel des fonctions summary et plot pour une commune
+
+```{r}
+# Filtrer les données pour la commune spécifiée
+df_commune <- dataset_sample[dataset_sample$Code.de.la.commune == params$code_commune, ]
+
+# Création de la classe "commune" pour le dataframe df_commune
+df_commune <- creer_commune(df_commune)
+
+# Appeler les fonctions summary et plot
+summary(df_commune)
+plot(df_commune)
+
+```
+
+# Appel des fonctions summary et plot pour un département
+
+```{r}
+# Filtrer les données pour le département spécifié
+df_departement <- dataset_sample[dataset_sample$Code.du.département == params$code_departement, ]
+
+# Création de la classe "departement" pour le dataframe df_departement
+df_departement <- creer_departement(df_departement)
+
+# Appeler les fonctions summary et plot
+summary(df_departement)
+plot(df_departement)
+```
