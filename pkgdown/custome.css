@@ -1,0 +1,65 @@
+/* Style général */
+body {
+  font-family: 'Arial', sans-serif;  /* Police lisible et moderne */
+  background-color: #f4f7f6; /* Couleur de fond très claire */
+  color: #333; /* Texte gris foncé pour une bonne lisibilité */
+}
+
+/* Personnalisation de l'en-tête (navbar) */
+.navbar {
+  background-color: #00274d; /* Bleu marine pour l'en-tête */
+  border-bottom: 2px solid #ffffff; /* Une bordure blanche en bas de l'en-tête */
+}
+
+.navbar-brand {
+  color: #ffffff !important; /* Texte de la marque (nom du site) en blanc */
+  font-size: 2em; /* Taille de la police pour la marque */
+  font-weight: bold; /* Mettre en gras le nom du site */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important; /* Liens en blanc */
+  font-size: 1.1em; /* Augmenter légèrement la taille des liens */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffcc00 !important; /* Lien survolé en or */
+}
+
+/* Personnalisation du footer (pied de page) */
+footer {
+  background-color: #00274d; /* Bleu marine */
+  color: white; /* Texte en blanc */
+  padding: 10px 0; /* Espacement du pied de page */
+  text-align: center; /* Centrer le texte */
+}
+
+/* Titres */
+h1, h2, h3 {
+  color: #00274d; /* Titres en bleu marine */
+  font-weight: bold; /* Mettre les titres en gras */
+}
+
+h1 {
+  font-size: 2.5em; /* Augmenter la taille des titres principaux */
+}
+
+/* Liens personnalisés */
+a {
+  color: #0056b3; /* Bleu pour les liens */
+}
+
+a:hover {
+  color: #ff6600; /* Orange pour les liens au survol */
+  text-decoration: underline; /* Ajouter un soulignement au survol */
+}
+
+/* Amélioration des boutons */
+.btn-primary {
+  background-color: #00274d; /* Bleu marine pour les boutons */
+  border: none; /* Supprimer la bordure */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Lien au survol devient plus clair */
+}
